@@ -47,7 +47,7 @@ The `lazy_find_by` returns an instance that does not execute SQL until it is nee
 
 ```ruby
 user = User.lazy_find_by(id: 1, name: "foo")
-#=> #<User id: 1, name: "foo", age: nil, created_at: nil, updated_at: nil>
+
 user.id
 #=> 1
 user.name
