@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sinsoku/active_record_lazy_find_by.svg?branch=master)](https://travis-ci.org/sinsoku/active_record_lazy_find_by)
+
 # ActiveRecordLazyFindBy
 
 `ActiveRecordLazyFindBy` provides simple lazy methods that be able to reduce SQL issuance slightly.

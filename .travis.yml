@@ -1,7 +1,23 @@
----
 sudo: false
 language: ruby
-cache: bundler
+
 rvm:
-  - 2.6.3
-before_install: gem install bundler -v 2.0.1
+  - 2.5
+  - 2.6
+  - ruby-head
+
+gemfile:
+  - gemfiles/activerecord_52.gemfile
+  - gemfiles/activerecord_60.gemfile
+  - gemfiles/activerecord_edge.gemfile
+
+before_install:
+  - gem update --system
+  - gem update bundler
+
+cache: bundler
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - gemfile: gemfiles/activerecord_edge.gemfile
